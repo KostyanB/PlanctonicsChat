@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# "PlanctonicsChat"
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Тестовое задание. Внутренний чат сотрудников компании "Planctonics"
 
-## Available Scripts
+## О приложениии
 
-In the project directory, you can run:
+Демо [PlanctonicsChat](https://planctonics-chat.web.app).
 
-### `npm start`
+* При старте приложения загрузка первичных данных из JSON файлов: список "авторизованных" юзеров и сообщений чатов из папки 'public/db'
+* Данные авторизации и текущего чата в LocalStorage.
+* Первый старт - Warning - требуется авторизация. Браузерный prompt по клику на "Кто здесь?" в шапке (для демо первично ввести Вася, Маруся или Moder).
+* При вводе "неавторизованного" имени просмотр чатов и кнопка отправки сообщений блокируются.
+* В левой колонке отображается список пользователей, за исключением прошедшего авторизацию. Подсвечивается имитация пользователей "онлайн". Статус задан в файле users.json.
+* В приложении 2 чата - рабочий "Work" и "Flood" для неформального общения.
+* После успешной авторизации в правой колонке выводится список сообщений выбранного чата: слева чужие, справа свои.
+* Для "своих" сообщений есть кнопки удаления и редактирования.
+* Пользователь Moder имеет возможность редактировать/удалять любые сообщения.
+* При перезагрузке приложения сообщения чатов берутся из LocalStorage, авторизация пользователя и последний выбранный чат сохраняются.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Стек технологий
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* Модульная структура;
+* ReactHooks, StyledComponents, ContentProvider;
+* Адаптивная кроссбраузерная верстка Grid/Flex;
+* Сборка с помощью [Create React App](https://github.com/facebook/create-react-app);
+* Деплой готовой сборки на [Firebase Hosting](https://firebase.google.com);
+* Используется LocalStorage.
 
-### `npm test`
+## Как установить?
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Скопировать содержимое репозитория в рабочую папку
+* В терминале выполнить команду `npm install`
+* Затем дополнительно установить [StyledComponents](https://styled-components.com) командой `npm install styled-components`
+* После установки модулей запустить development mode командой `npm start`
+* Открыть [http://localhost:3000](http://localhost:3000) для просмотра в браузере
+* Для сборки приложения команда `npm run build`. Готовый проект будет в папке `build` рабочей директории

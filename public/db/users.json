@@ -1,0 +1,57 @@
+[
+    {
+        "id": "1",
+        "name": "SpongeBob",
+        "status": "on"
+    },
+    {
+        "id": "2",
+        "name": "Patrick",
+        "status": "off"
+    },
+    {
+        "id": "3",
+        "name": "Squidward",
+        "status": "on"
+    },
+    {
+        "id": "4",
+        "name": "MrKrabs",
+        "status": "off"
+    },
+    {
+        "id": "5",
+        "name": "Plankton",
+        "status": "on"
+    },
+    {
+        "id": "6",
+        "name": "Маруся",
+        "status": "off"
+    },
+    {
+        "id": "7",
+        "name": "Вася",
+        "status": "on"
+    },
+    {
+        "id": "8",
+        "name": "Ирина",
+        "status": "off"
+    },
+    {
+        "id": "9",
+        "name": "Алефтина Егоровна",
+        "status": "on"
+    },
+    {
+        "id": "10",
+        "name": "Zuker",
+        "status": "on"
+    },
+    {
+        "id": "11",
+        "name": "Moder",
+        "status": "on"
+    }
+]
