@@ -70,7 +70,6 @@ const TopicItem = ({ index, name, text, status, edited }) => {
     const list = (hash === 'Work') ? workList : floodList;
 
     const renderList = val => {
-        console.log('val: ', val);
         // (hash === 'Work') ? setWorkList(val) : setFloodList(val);
         if (hash === 'Work') {
             setWorkList(val);
@@ -108,9 +107,10 @@ const TopicItem = ({ index, name, text, status, edited }) => {
                 <ItemHead>{name}</ItemHead>
                 {edited ?
                     <ItemText>{text}</ItemText> :
-                    <ItemInput value={text} type="text"
-                        onInput={event => changeText(index, event)}
-                        onBlur={() => toggleEdit(index)}/>
+                    <ItemInput defaultValue={text} type="text"
+                        onInput={e => changeText(index, e)}
+                        onBlur={() => toggleEdit(index)}
+                    />
                 }
             </TextWrap>
             <BtnWrap>
